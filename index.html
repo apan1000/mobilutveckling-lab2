@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kappa Facts</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="style/kappafacts.css">
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+    <!-- Include the jQuery library -->
+    <script src="js/jquery/jquery-2.1.3.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="pageone">
+      <div data-role="main" class="ui-content">
+        <div data-role="header">
+          <h1>Kappa Facts</h1>
+        </div>
+        <form class="ui-filterable">
+          <input id="fact-filter" data-type="search" placeholder="Search for facts..">
+        </form>
+        <ul data-role="listview" data-filter="true" data-input="#facts-filter" id="factlist"></ul>
+      </div>
+    </div>
+    <div data-role="page" id="pagetwo">
+      <div data-role="main" class="ui-content">
+        <div data-role="header">
+          <h1>Kappa Facts</h1>
+        </div>
+        <h3 id="fact-head"></h2>
+        <div id="fact-content"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
