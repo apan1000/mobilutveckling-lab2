@@ -2,3 +2,30 @@
 	/*word-wrap: break-word !important;
 	white-space: normal !important;*/
 }
+
+.middle-align {
+	text-align: center;
+}
+
+#factlist {
+	margin-top: 10px;
+}
+
+button {
+	text-shadow: none !important;
+}
+
+#food {
+	color: #fff;
+	background: #ed711e;
+}
+
+#history {
+	color: #fff;
+	background: #0050C3;
+}
+
+#business {
+	color: #fff;
+	background: #0db069;
+}

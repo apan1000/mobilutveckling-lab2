@@ -5,8 +5,40 @@
     <title>Kappa Facts</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="style/kappafacts.css">
+
+    <!-- Icons and stuff -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#e8c41b">
+    <!-- iPhone 5 -->
+    <link rel="apple-touch-startup-image"
+          media="(device-width: 320px)
+                and (device-height: 568px)
+                and (-webkit-device-pixel-ratio: 2)"
+      href="splash.png">
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!-- Include jQuery Mobile stylesheets -->
     <link rel="stylesheet" href="js/jquery/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="js/jquery/jquery.mobile.theme-1.4.5.css">
+    <link rel="stylesheet" href="js/jquery/jquery.mobile.icons-1.4.5.min.css">
     <!-- Include the jQuery library -->
     <script src="js/jquery/jquery-2.1.3.min.js"></script>
     <!-- Include the jQuery Mobile library -->
@@ -14,23 +46,29 @@
   </head>
   <body>
     <div data-role="page" id="pageone">
-      <div data-role="main" class="ui-content">
-        <div data-role="header">
-          <h1>Kappa Facts</h1>
+      <div data-role="main">
+        <div data-role="header" class="ui-header" role="banner">
+          <h1 class="ui-title" role="heading" aria-level="1">Kappa Facts</h1>
         </div>
         <form class="ui-filterable">
           <input id="fact-filter" data-type="search" placeholder="Search for facts..">
         </form>
-        <ul data-role="listview" data-filter="true" data-input="#facts-filter" id="factlist"></ul>
+        <div class="middle-align" data-mini="true" data-role="controlgroup" data-type="horizontal">
+          <button id="food">Food</button>
+          <button id="history">History</button>
+          <button id="business">Epic Business</button>
+        </div>
+        <ul data-role="listview" data-filter="true" data-input="#fact-filter" id="factlist"></ul>
       </div>
     </div>
     <div data-role="page" id="pagetwo">
-      <div data-role="main" class="ui-content">
+      <div data-role="main">
         <div data-role="header">
           <h1>Kappa Facts</h1>
+          <a href="#pageone" data-transition="slide" data-direction="reverse" class="ui-btn ui-btn-icon-left ui-icon-carat-l">Back</a>
         </div>
-        <h3 id="fact-head"></h2>
-        <div id="fact-content"></div>
+        <h3 id="fact-head" class="ui-content"></h2>
+        <div id="fact-content" class="ui-content"></div>
       </div>
     </div>
 
